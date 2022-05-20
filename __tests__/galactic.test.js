@@ -24,7 +24,7 @@ describe('GalacticAges', () => {
   });
 
   test('method should assign another property to the object called healthStatus', () => {
-    lunaFromTheMilkyWay.determineHealthStatus();
+    lunaFromTheMilkyWay.determineHealthStatus(true, true, true);
     expect(lunaFromTheMilkyWay.healthStatus).toEqual("healthy");
   });
 
