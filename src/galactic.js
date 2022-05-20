@@ -8,10 +8,10 @@ export default class GalacticAges {
 
   calculateAges() {
     const earthAge = this.userEarthAge[0];
-    this.ageInMercury = [Math.floor(earthAge/0.24)];
-    this.ageInVenus = [Math.floor(earthAge/0.62)];
-    this.ageInMars = [Math.floor(earthAge/1.88)];
-    this.ageInJupiter = [Math.floor(earthAge/11.86)];
+    this.ageInMercury = [Math.round(100*earthAge/0.24)/100];
+    this.ageInVenus = [Math.round(100*earthAge/0.62)/100];
+    this.ageInMars = [Math.round(100*earthAge/1.88)/100];
+    this.ageInJupiter = [Math.round(100*earthAge/11.86)/100];
   }
 
   determineHealthStatus(nonSmoker, exercises, healthyDiet) {
@@ -26,6 +26,10 @@ export default class GalacticAges {
     } else if (nonSmoker===false && exercises===false && healthyDiet ===false) {
       this.healthStatus = "unhealthy";
       this.userEarthAge[1] = Math.round(averageEarthLifeExpectancy-3 - this.userEarthAge[0]);
+      this.ageInMercury[1] = Math.round(this.userEarthAge[1]/0.24);
+      this.ageInVenus[1] = Math.round(this.userEarthAge[1]/0.62);
+      this.ageInMars[1] = Math.round(this.userEarthAge[1]/1.88);
+      this.ageInJupiter[1] = Math.round(this.userEarthAge[1]/11.86);
     } else {
       this.healthStatus = "standard";
     }
