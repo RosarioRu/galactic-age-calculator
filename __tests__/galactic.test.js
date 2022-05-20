@@ -1,1 +1,1 @@
-import TemplateClassName from '../src/template.js';
+import GalacticAge from './../src/galactic.js';
