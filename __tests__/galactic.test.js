@@ -48,7 +48,12 @@ describe('GalacticAges', () => {
     expect(lunaFromTheMilkyWay.healthStatus).toEqual("standard");
   });
 
-  // test('should return number of years left on earth 
+  test('should calculate number of years left on earth and return this as second element in array for key called userEarthAge', () => {
+    let lunaFromTheMilkyWay2 = new GalacticAges("Luna", 35);
+    lunaFromTheMilkyWay2.determineHealthStatus(true, true, true);
+    lunaFromTheMilkyWay2.yearsLeft();
+    expect(lunaFromTheMilkyWay2.userEarthAge[1]).toEqual("46.8");
+    //The plan: assume 78.79-us average life expectancy. Add 3yrs for "healthy, reduce 3yrs for "unhealthy."
+  });
 
-
-});
+})
