@@ -6,6 +6,11 @@ export default class GalacticAges {
     this.userAge = userAge;
   }
 
+  calculateAges() {
+    //code goes here
+  }
+
+
   //example of a method function:
   // templateExample(number) {
   //   this.health = (this.health)-number;
