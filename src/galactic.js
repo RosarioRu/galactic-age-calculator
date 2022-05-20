@@ -1,6 +1,6 @@
 //business logic with class example below:
 
-export default class TemplateClassName {
+export default class GalacticAge {
   //example of a constructor function:
   // constructor (intelligence, charm) {
   //   this.intelligence = intelligence;
