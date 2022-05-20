@@ -14,9 +14,9 @@ export default class GalacticAges {
     this.ageInJupiter = Math.floor(earthAge/11.86);
   }
 
-
-  //example of a method function:
-  // templateExample(number) {
-  //   this.health = (this.health)-number;
-  // }
+  determineHealthStatus(nonSmoker, exercises, healthyDiet) {
+    if ((nonSmoker === true) && (exercises === true) && (healthyDiet === true)) {
+      this.healthStatus = "healthy";
+    }
+  }
 }
