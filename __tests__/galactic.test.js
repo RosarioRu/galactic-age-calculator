@@ -70,6 +70,18 @@ describe('GalacticAges', () => {
     lunaFromTheMilkyWay2.yearsLeft();
     expect(lunaFromTheMilkyWay2.userEarthAge[1]).toEqual("43.8");
   });
+
+  test('should calculate number of years left on Mercury, Venus, Mars and Jupiter and store these as second elements in their coresponding planet age properties when user is "healthy"', () => {
+    let lunaFromTheMilkyWay2 = new GalacticAges("Luna", 35);
+    lunaFromTheMilkyWay2.calculateAges();
+    lunaFromTheMilkyWay2.determineHealthStatus(true, true, true);
+    lunaFromTheMilkyWay2.yearsLeft();
+    expect(lunaFromTheMilkyWay2.ageInMercury[1]).toEqual(195);
+    expect(lunaFromTheMilkyWay2.ageInVenus[1]).toEqual(76);
+    expect(lunaFromTheMilkyWay2.ageInMars[1]).toEqual(25);
+    expect(lunaFromTheMilkyWay2.ageInJupiter[1]).toEqual(4);
+  });
+
   // test('should calculate number of years left on Mercury, Venus, Mars and Jupiter and store these as second elements in their coresponding planet age properties', () => {
   //   let lunaFromTheMilkyWay2 = new GalacticAges("Luna", 35);
   //   lunaFromTheMilkyWay2.determineHealthStatus(true, true, true);
