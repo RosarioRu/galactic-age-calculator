@@ -22,5 +22,10 @@ describe('GalacticAges', () => {
     expect(lunaFromTheMilkyWay.ageInMars).toEqual(18);
     expect(lunaFromTheMilkyWay.ageInJupiter).toEqual(2);
   });
-  
+
+  test('method should assign another property to the object called healthStatus', () => {
+    lunaFromTheMilkyWay.determineHealthStatus();
+    expect(lunaFromTheMilkyWay.healthStatus).toEqual("healthy");
+  });
+
 });
