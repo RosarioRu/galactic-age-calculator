@@ -7,7 +7,8 @@ export default class GalacticAges {
   }
 
   calculateAges() {
-    //code goes here
+    const earthAge = this.userAge;
+    this.ageInMercury = Math.floor(earthAge/0.24);
   }
 
 

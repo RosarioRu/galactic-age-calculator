@@ -12,5 +12,6 @@ describe('GalacticAges', () => {
     lunaFromTheMilkyWay.calculateAges();
     expect(lunaFromTheMilkyWay.ageInMercury).toEqual(145);
   });
+  
 
 });
