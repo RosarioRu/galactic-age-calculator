@@ -12,6 +12,18 @@ describe('GalacticAges', () => {
     lunaFromTheMilkyWay.calculateAges();
     expect(lunaFromTheMilkyWay.ageInMercury).toEqual(145);
   });
+
+  test('method should add three other properties to the object, the age of the user in Venus, Mars and Jupiter', () => {
+    const lunaFromTheMilkyWay = new GalacticAges("Luna", 35);
+    lunaFromTheMilkyWay.calculateAges();
+    expect(lunaFromTheMilkyWay.ageInVenus).toEqual(56);
+    expect(lunaFromTheMilkyWay.ageInMars).toEqual(18);
+    expect(lunaFromTheMilkyWay.ageInJupiter).toEqual(2);
+    
+  });
   
+
+  
+
 
 });
