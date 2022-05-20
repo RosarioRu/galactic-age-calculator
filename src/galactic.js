@@ -40,18 +40,5 @@ export default class GalacticAges {
     }
   }
 
-  // yearsLeft() {
-  //   const averageEarthLifeExpectancy = 78.79; 
-  //   if (this.healthStatus === "healthy") {
-  //     this.userEarthAge[1] = Math.round(averageEarthLifeExpectancy+3 - this.userEarthAge[0]);
-  //     this.ageInMercury[1] = Math.round(this.userEarthAge[1]/0.24);
-  //     this.ageInVenus[1] = Math.round(this.userEarthAge[1]/0.62);
-  //     this.ageInMars[1] = Math.round(this.userEarthAge[1]/1.88);
-  //     this.ageInJupiter[1] = Math.round(this.userEarthAge[1]/11.86);
-  //   } else if (this.healthStatus === "unhealthy") {
-  //     this.userEarthAge[1] = Math.round(averageEarthLifeExpectancy-3 - this.userEarthAge[0]);
-  //   } else {
-  //     this.userEarthAge[1] = Math.round(averageEarthLifeExpectancy - this.userEarthAge[0]);
-  //   }
-  // }
+ 
 }
