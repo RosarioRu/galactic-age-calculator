@@ -1,8 +1,8 @@
-# _TITLE_
+# _Galactic Age Calculator_
 
 #### By _**Rosario Ruvalcaba**_
 
-#### _SHORT DESCRIPTION._
+#### _A program that calculates the user's age and life expectancy in solar years for several planets in the galaxy._
 
 ## Technologies Used
 
@@ -15,7 +15,7 @@
 
 ## Description
 
-_._
+_The project was created for Epicodus after the Test Driven Development section in order to demonstrate understanding of Red-Green-Refactor workflow. Project utilizes ES6 classes and arrow notation._
 
 ## Setup/Installation Requirements
 
