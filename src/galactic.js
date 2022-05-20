@@ -30,6 +30,8 @@ export default class GalacticAges {
       this.userEarthAge[1] = (averageEarthLifeExpectancy+3 - this.userEarthAge[0]).toFixed(1);
     } else if (this.healthStatus === "unhealthy") {
       this.userEarthAge[1] = (averageEarthLifeExpectancy-3 - this.userEarthAge[0]).toFixed(1);
+    } else {
+      this.userEarthAge[1] = (averageEarthLifeExpectancy - this.userEarthAge[0]).toFixed(1);
     }
   }
 }
