@@ -19,6 +19,8 @@ export default class GalacticAges {
       this.healthStatus = "healthy";
     } else if (nonSmoker===false && exercises===false && healthyDiet ===false) {
       this.healthStatus = "unhealthy";
+    } else {
+      this.healthStatus = "standard";
     }
   }
 }
