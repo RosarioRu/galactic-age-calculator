@@ -29,7 +29,6 @@ describe('GalacticAges', () => {
     const healthyDiet = true;
     lunaFromTheMilkyWay.determineHealthStatus(nonSmoker, exercise, healthyDiet);
     expect(lunaFromTheMilkyWay.healthStatus).toEqual("healthy");
-    console.log("healthy: " + lunaFromTheMilkyWay.healthStatus);
   });
 
   test('method should assign another property to the object called healthStatus and in this case return "unhealthy"', () => {
@@ -38,7 +37,6 @@ describe('GalacticAges', () => {
     const healthyDiet = false;
     lunaFromTheMilkyWay.determineHealthStatus(nonSmoker, exercise, healthyDiet);
     expect(lunaFromTheMilkyWay.healthStatus).toEqual("unhealthy");
-    console.log("unhealthy: " + lunaFromTheMilkyWay.healthStatus);
   });
 
   test('method should assign another property to the object called healthStatus and in this case return "standard"', () => {
@@ -47,7 +45,6 @@ describe('GalacticAges', () => {
     const healthyDiet = false;
     lunaFromTheMilkyWay.determineHealthStatus(nonSmoker, exercise, healthyDiet);
     expect(lunaFromTheMilkyWay.healthStatus).toEqual("standard");
-    console.log("standard: " + lunaFromTheMilkyWay.healthStatus);
   });
 
 });
