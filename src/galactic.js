@@ -25,6 +25,7 @@ export default class GalacticAges {
       this.ageInJupiter[1] = Math.round(this.userEarthAge[1]/11.86);
     } else if (nonSmoker===false && exercises===false && healthyDiet ===false) {
       this.healthStatus = "unhealthy";
+      this.userEarthAge[1] = Math.round(averageEarthLifeExpectancy-3 - this.userEarthAge[0]);
     } else {
       this.healthStatus = "standard";
     }

@@ -24,24 +24,28 @@ describe('GalacticAges', () => {
     expect(lunaFromTheMilkyWay.ageInJupiter).toEqual([2]);
   });
 
-  test('method should assign another property to the object called healthStatus and in this case return "healthy"', () => {
+  test('method should assign another property to the object called healthStatus and in this case return "healthy." It should also calculate years left on each planet based on "healthy" healthStatus and set these as second elements in array for each planet age', () => {
     const nonSmoker = true;
     const exercise = true;
     const healthyDiet = true;
     lunaFromTheMilkyWay.calculateAges();
     lunaFromTheMilkyWay.determineHealthStatus(nonSmoker, exercise, healthyDiet);
     expect(lunaFromTheMilkyWay.healthStatus).toEqual("healthy");
-    console.log("health status should be healthy " + lunaFromTheMilkyWay.healthStatus); //console log
-    expect(lunaFromTheMilkyWay.userEarthAge[1]).toEqual(47); //added line
-    console.log("yrs left should be 47 " + lunaFromTheMilkyWay.userEarthAge[1]); //console log
+    expect(lunaFromTheMilkyWay.userEarthAge[1]).toEqual(47);
+    expect(lunaFromTheMilkyWay.ageInMercury[1]).toEqual(196);
+    expect(lunaFromTheMilkyWay.ageInVenus[1]).toEqual(76);
+    expect(lunaFromTheMilkyWay.ageInMars[1]).toEqual(25);
+    expect(lunaFromTheMilkyWay.ageInJupiter[1]).toEqual(4);
   });
 
-  test('method should assign another property to the object called healthStatus and in this case return "unhealthy"', () => {
+  test('method should assign another property to the object called healthStatus and in this case return "unhealthy." It should also calculate years left on each planet based on "unhealthy" healthStatus and set these as second elements in array for each planet age', () => {
     const nonSmoker = false;
     const exercise = false;
     const healthyDiet = false;
     lunaFromTheMilkyWay.determineHealthStatus(nonSmoker, exercise, healthyDiet);
     expect(lunaFromTheMilkyWay.healthStatus).toEqual("unhealthy");
+    expect(lunaFromTheMilkyWay.userEarthAge[1]).toEqual(41);
+
   });
 
   test('method should assign another property to the object called healthStatus and in this case return "standard"', () => {
