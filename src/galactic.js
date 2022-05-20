@@ -23,4 +23,11 @@ export default class GalacticAges {
       this.healthStatus = "standard";
     }
   }
+
+  yearsLeft() {
+    const averageEarthLifeExpectancy = 78.79;
+    if (this.healthStatus = "healthy") {
+      this.userEarthAge[1] = (averageEarthLifeExpectancy+3 - this.userEarthAge[0]).toFixed(1);
+    }
+  }
 }
