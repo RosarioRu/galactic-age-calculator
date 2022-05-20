@@ -23,14 +23,22 @@ describe('GalacticAges', () => {
     expect(lunaFromTheMilkyWay.ageInJupiter).toEqual(2);
   });
 
-  test('method should assign another property to the object called healthStatus', () => {
-    let nonSmoker = true;
-    let exercise = true;
-    let healthyDiet = true;
+  test('method should assign another property to the object called healthStatus and in this case return "healthy"', () => {
+    const nonSmoker = true;
+    const exercise = true;
+    const healthyDiet = true;
     lunaFromTheMilkyWay.determineHealthStatus(nonSmoker, exercise, healthyDiet);
     expect(lunaFromTheMilkyWay.healthStatus).toEqual("healthy");
-    console.log(lunaFromTheMilkyWay.healthStatus);
-    
+    console.log("healthy: " + lunaFromTheMilkyWay.healthStatus);
+  });
+
+  test('method should assign another property to the object called healthStatus and in this case return "unhealthy"', () => {
+    const nonSmoker = false;
+    const exercise = false;
+    const healthyDiet = false;
+    lunaFromTheMilkyWay.determineHealthStatus(nonSmoker, exercise, healthyDiet);
+    expect(lunaFromTheMilkyWay.healthStatus).toEqual("unhealthy");
+    console.log("unhealthy: " + lunaFromTheMilkyWay.healthStatus);
   });
 
 });
