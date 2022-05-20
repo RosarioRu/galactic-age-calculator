@@ -9,6 +9,9 @@ export default class GalacticAges {
   calculateAges() {
     const earthAge = this.userAge;
     this.ageInMercury = Math.floor(earthAge/0.24);
+    this.ageInVenus = Math.floor(earthAge/0.62);
+    this.ageInMars = Math.floor(earthAge/1.88);
+    this.ageInJupiter = Math.floor(earthAge/11.86);
   }
 
 
