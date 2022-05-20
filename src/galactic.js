@@ -1,17 +1,17 @@
 //business logic with class example below:
 
 export default class GalacticAges {
-  constructor (userName, userAge) {
+  constructor (userName, userEarthAge) {
     this.userName = userName;
-    this.userAge = userAge;
+    this.userEarthAge = [userEarthAge];
   }
 
   calculateAges() {
-    const earthAge = this.userAge;
-    this.ageInMercury = Math.floor(earthAge/0.24);
-    this.ageInVenus = Math.floor(earthAge/0.62);
-    this.ageInMars = Math.floor(earthAge/1.88);
-    this.ageInJupiter = Math.floor(earthAge/11.86);
+    const earthAge = this.userEarthAge[0];
+    this.ageInMercury = [Math.floor(earthAge/0.24)];
+    this.ageInVenus = [Math.floor(earthAge/0.62)];
+    this.ageInMars = [Math.floor(earthAge/1.88)];
+    this.ageInJupiter = [Math.floor(earthAge/11.86)];
   }
 
   determineHealthStatus(nonSmoker, exercises, healthyDiet) {

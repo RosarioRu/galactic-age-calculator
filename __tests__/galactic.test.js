@@ -6,21 +6,22 @@ describe('GalacticAges', () => {
   beforeEach(() => {
     lunaFromTheMilkyWay = new GalacticAges("Luna", 35);
   });
-  test('should create an object with two properties - userName and userAge', () => {
+
+  test('should create an object with two properties - userName and userEarthAge', () => {
     expect(lunaFromTheMilkyWay.userName).toEqual("Luna");
-    expect(lunaFromTheMilkyWay.userAge).toEqual(35);
+    expect(lunaFromTheMilkyWay.userEarthAge).toEqual([35]);
   });
 
-  test('method should add another property to the object for the age of the user in Mercury', () => {
+  test('method should add another property to the object for the age of the user in Mercury inside an array', () => {
     lunaFromTheMilkyWay.calculateAges();
-    expect(lunaFromTheMilkyWay.ageInMercury).toEqual(145);
+    expect(lunaFromTheMilkyWay.ageInMercury).toEqual([145]);
   });
 
-  test('method should add three other properties to the object, the age of the user in Venus, Mars and Jupiter', () => {
+  test('method should add three other properties to the object, the age of the user in Venus, Mars and Jupiter inside arrays', () => {
     lunaFromTheMilkyWay.calculateAges();
-    expect(lunaFromTheMilkyWay.ageInVenus).toEqual(56);
-    expect(lunaFromTheMilkyWay.ageInMars).toEqual(18);
-    expect(lunaFromTheMilkyWay.ageInJupiter).toEqual(2);
+    expect(lunaFromTheMilkyWay.ageInVenus).toEqual([56]);
+    expect(lunaFromTheMilkyWay.ageInMars).toEqual([18]);
+    expect(lunaFromTheMilkyWay.ageInJupiter).toEqual([2]);
   });
 
   test('method should assign another property to the object called healthStatus and in this case return "healthy"', () => {
@@ -46,5 +47,8 @@ describe('GalacticAges', () => {
     lunaFromTheMilkyWay.determineHealthStatus(nonSmoker, exercise, healthyDiet);
     expect(lunaFromTheMilkyWay.healthStatus).toEqual("standard");
   });
+
+  // test('should return number of years left on earth 
+
 
 });
