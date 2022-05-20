@@ -1,6 +1,8 @@
 //business logic with class example below:
 
-export default class GalacticAge {
+export default class GalacticAges {
+
+
   //example of a constructor function:
   // constructor (intelligence, charm) {
   //   this.intelligence = intelligence;
