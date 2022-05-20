@@ -14,14 +14,14 @@ describe('GalacticAges', () => {
 
   test('method should add another property to the object for the age of the user in Mercury inside an array', () => {
     lunaFromTheMilkyWay.calculateAges();
-    expect(lunaFromTheMilkyWay.ageInMercury).toEqual([145]);
+    expect(lunaFromTheMilkyWay.ageInMercury).toEqual([145.83]);
   });
 
   test('method should add three other properties to the object, the age of the user in Venus, Mars and Jupiter inside arrays', () => {
     lunaFromTheMilkyWay.calculateAges();
-    expect(lunaFromTheMilkyWay.ageInVenus).toEqual([56]);
-    expect(lunaFromTheMilkyWay.ageInMars).toEqual([18]);
-    expect(lunaFromTheMilkyWay.ageInJupiter).toEqual([2]);
+    expect(lunaFromTheMilkyWay.ageInVenus).toEqual([56.45]);
+    expect(lunaFromTheMilkyWay.ageInMars).toEqual([18.62]);
+    expect(lunaFromTheMilkyWay.ageInJupiter).toEqual([2.95]);
   });
 
   test('method should assign another property to the object called healthStatus and in this case return "healthy." It should also calculate years left on each planet based on "healthy" healthStatus and set these as second elements in array for each planet age', () => {
@@ -42,10 +42,14 @@ describe('GalacticAges', () => {
     const nonSmoker = false;
     const exercise = false;
     const healthyDiet = false;
+    lunaFromTheMilkyWay.calculateAges();
     lunaFromTheMilkyWay.determineHealthStatus(nonSmoker, exercise, healthyDiet);
     expect(lunaFromTheMilkyWay.healthStatus).toEqual("unhealthy");
     expect(lunaFromTheMilkyWay.userEarthAge[1]).toEqual(41);
-
+    expect(lunaFromTheMilkyWay.ageInMercury[1]).toEqual(171);
+    expect(lunaFromTheMilkyWay.ageInVenus[1]).toEqual(66);
+    expect(lunaFromTheMilkyWay.ageInMars[1]).toEqual(22);
+    expect(lunaFromTheMilkyWay.ageInJupiter[1]).toEqual(3);
   });
 
   test('method should assign another property to the object called healthStatus and in this case return "standard"', () => {
