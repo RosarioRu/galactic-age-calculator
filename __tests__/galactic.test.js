@@ -24,8 +24,13 @@ describe('GalacticAges', () => {
   });
 
   test('method should assign another property to the object called healthStatus', () => {
-    lunaFromTheMilkyWay.determineHealthStatus(true, true, true);
+    let nonSmoker = true;
+    let exercise = true;
+    let healthyDiet = true;
+    lunaFromTheMilkyWay.determineHealthStatus(nonSmoker, exercise, healthyDiet);
     expect(lunaFromTheMilkyWay.healthStatus).toEqual("healthy");
+    console.log(lunaFromTheMilkyWay.healthStatus);
+    
   });
 
 });
