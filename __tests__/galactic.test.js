@@ -64,49 +64,21 @@ describe('GalacticAges', () => {
     expect(lunaFromTheMilkyWay.ageInVenus[1]).toEqual(71);
     expect(lunaFromTheMilkyWay.ageInMars[1]).toEqual(23);
     expect(lunaFromTheMilkyWay.ageInJupiter[1]).toEqual(4);
+  });  
+
+  test('it should return a negative number when user has surpassed life-expectancy', () => {
+    let oldLuna = new GalacticAges("Luna", "100");
+    const nonSmoker = true;
+    const exercise = true;
+    const healthyDiet = true;
+    oldLuna.calculateAges();
+    oldLuna.determineHealthStatus(nonSmoker, exercise, healthyDiet);
+    expect(oldLuna.healthStatus).toEqual("healthy");
+    expect(oldLuna.userEarthAge[1]).toEqual(-18);
+    expect(oldLuna.ageInMercury[1]).toEqual(-75);
+    expect(oldLuna.ageInVenus[1]).toEqual(-29);
+    expect(oldLuna.ageInMars[1]).toEqual(-10);
+    expect(oldLuna.ageInJupiter[1]).toEqual(-2);
   });
-
-  // test('should calculate number of years left on earth and return this as second element in array for key called userEarthAge', () => {
-  //   let lunaFromTheMilkyWay2 = new GalacticAges("Luna", 35);
-  //   lunaFromTheMilkyWay2.calculateAges();
-  //   lunaFromTheMilkyWay2.determineHealthStatus(true, true, true);
-  //   lunaFromTheMilkyWay2.yearsLeft();
-  //   expect(lunaFromTheMilkyWay2.userEarthAge[1]).toEqual(47);
-  //   //The plan: assume 78.79-us average life expectancy. Add 3yrs for "healthy, reduce 3yrs for "unhealthy."
-
-  // });
-
-  // test('should calculate number of years left on earth when health is poor and return this as second element in array for key called userEarthAge', () => {
-  //   let lunaFromTheMilkyWay2 = new GalacticAges("Luna", 35);
-  //   lunaFromTheMilkyWay2.determineHealthStatus(false, false, false);
-  //   lunaFromTheMilkyWay2.yearsLeft();
-  //   expect(lunaFromTheMilkyWay2.userEarthAge[1]).toEqual(41);
-    
-  // });
-
-  // test('should calculate number of years left on earth when health is average and return this as second element in array for key called userEarthAge', () => {
-  //   let lunaFromTheMilkyWay2 = new GalacticAges("Luna", 35);
-  //   lunaFromTheMilkyWay2.determineHealthStatus(false, true, false);
-  //   lunaFromTheMilkyWay2.yearsLeft();
-  //   expect(lunaFromTheMilkyWay2.userEarthAge[1]).toEqual(44);
-  // });
-
-  // test('should calculate number of years left on Mercury, Venus, Mars and Jupiter and store these as second elements in their coresponding planet age properties when user is "healthy"', () => {
-  //   let lunaFromTheMilkyWay2 = new GalacticAges("Luna", 35);
-  //   lunaFromTheMilkyWay2.calculateAges();
-  //   lunaFromTheMilkyWay2.determineHealthStatus(true, true, true);
-  //   lunaFromTheMilkyWay2.yearsLeft();
-  //   expect(lunaFromTheMilkyWay2.ageInMercury[1]).toEqual(196);
-  //   expect(lunaFromTheMilkyWay2.ageInVenus[1]).toEqual(76);
-  //   expect(lunaFromTheMilkyWay2.ageInMars[1]).toEqual(25);
-  //   expect(lunaFromTheMilkyWay2.ageInJupiter[1]).toEqual(4);
-  // });
-
-  // test('should calculate number of years left on Mercury, Venus, Mars and Jupiter and store these as second elements in their coresponding planet age properties', () => {
-  //   let lunaFromTheMilkyWay2 = new GalacticAges("Luna", 35);
-  //   lunaFromTheMilkyWay2.determineHealthStatus(true, true, true);
-  //   lunaFromTheMilkyWay2.yearsLeft();
-  //   expect(lunaFromTheMilkyWay2.userEarthAge[1]).toEqual("46.8");
-  // });
 
 })
