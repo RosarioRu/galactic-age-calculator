@@ -56,8 +56,14 @@ describe('GalacticAges', () => {
     const nonSmoker = true;
     const exercise = false;
     const healthyDiet = false;
+    lunaFromTheMilkyWay.calculateAges();
     lunaFromTheMilkyWay.determineHealthStatus(nonSmoker, exercise, healthyDiet);
     expect(lunaFromTheMilkyWay.healthStatus).toEqual("standard");
+    expect(lunaFromTheMilkyWay.userEarthAge[1]).toEqual(44);
+    expect(lunaFromTheMilkyWay.ageInMercury[1]).toEqual(183);
+    expect(lunaFromTheMilkyWay.ageInVenus[1]).toEqual(71);
+    expect(lunaFromTheMilkyWay.ageInMars[1]).toEqual(23);
+    expect(lunaFromTheMilkyWay.ageInJupiter[1]).toEqual(4);
   });
 
   // test('should calculate number of years left on earth and return this as second element in array for key called userEarthAge', () => {

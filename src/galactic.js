@@ -32,6 +32,11 @@ export default class GalacticAges {
       this.ageInJupiter[1] = Math.round(this.userEarthAge[1]/11.86);
     } else {
       this.healthStatus = "standard";
+      this.userEarthAge[1] = Math.round(averageEarthLifeExpectancy - this.userEarthAge[0]);
+      this.ageInMercury[1] = Math.round(this.userEarthAge[1]/0.24);
+      this.ageInVenus[1] = Math.round(this.userEarthAge[1]/0.62);
+      this.ageInMars[1] = Math.round(this.userEarthAge[1]/1.88);
+      this.ageInJupiter[1] = Math.round(this.userEarthAge[1]/11.86);
     }
   }
 
