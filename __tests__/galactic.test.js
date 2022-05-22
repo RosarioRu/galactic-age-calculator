@@ -38,33 +38,33 @@ describe('GalacticAges', () => {
     expect(lunaFromTheMilkyWay.jupiterInfo.yearsLeft).toEqual(4);
   });
 
-  // test('method should assign another property to the object called healthStatus and in this case return "unhealthy." It should also calculate years left on each planet based on "unhealthy" healthStatus and set these as second elements in array for each planet age', () => {
-  //   const nonSmoker = false;
-  //   const exercise = false;
-  //   const healthyDiet = false;
-  //   lunaFromTheMilkyWay.calculateAges();
-  //   lunaFromTheMilkyWay.determineLifeExpectancy(nonSmoker, exercise, healthyDiet);
-  //   expect(lunaFromTheMilkyWay.healthStatus).toEqual("unhealthy");
-  //   expect(lunaFromTheMilkyWay.userEarthAge[1]).toEqual(41);
-  //   expect(lunaFromTheMilkyWay.ageInMercury[1]).toEqual(171);
-  //   expect(lunaFromTheMilkyWay.ageInVenus[1]).toEqual(66);
-  //   expect(lunaFromTheMilkyWay.ageInMars[1]).toEqual(22);
-  //   expect(lunaFromTheMilkyWay.ageInJupiter[1]).toEqual(3);
-  // });
+  test('method should assign another property to the object called healthStatus and in this case return "unhealthy." It should also calculate years left on each planet based on "unhealthy" healthStatus and set these as second items in corresponding planet info objects', () => {
+    const nonSmoker = false;
+    const exercise = false;
+    const healthyDiet = false;
+    lunaFromTheMilkyWay.calculateAges();
+    lunaFromTheMilkyWay.determineLifeExpectancy(nonSmoker, exercise, healthyDiet);
+    expect(lunaFromTheMilkyWay.healthStatus).toEqual("unhealthy");
+    expect(lunaFromTheMilkyWay.earthInfo.yearsLeft).toEqual(41);
+    expect(lunaFromTheMilkyWay.mercuryInfo.yearsLeft).toEqual(171);
+    expect(lunaFromTheMilkyWay.venusInfo.yearsLeft).toEqual(66);
+    expect(lunaFromTheMilkyWay.marsInfo.yearsLeft).toEqual(22);
+    expect(lunaFromTheMilkyWay.jupiterInfo.yearsLeft).toEqual(3);
+  });
 
-  // test('method should assign another property to the object called healthStatus and in this case return "standard"', () => {
-  //   const nonSmoker = true;
-  //   const exercise = false;
-  //   const healthyDiet = false;
-  //   lunaFromTheMilkyWay.calculateAges();
-  //   lunaFromTheMilkyWay.determineLifeExpectancy(nonSmoker, exercise, healthyDiet);
-  //   expect(lunaFromTheMilkyWay.healthStatus).toEqual("standard");
-  //   expect(lunaFromTheMilkyWay.userEarthAge[1]).toEqual(44);
-  //   expect(lunaFromTheMilkyWay.ageInMercury[1]).toEqual(183);
-  //   expect(lunaFromTheMilkyWay.ageInVenus[1]).toEqual(71);
-  //   expect(lunaFromTheMilkyWay.ageInMars[1]).toEqual(23);
-  //   expect(lunaFromTheMilkyWay.ageInJupiter[1]).toEqual(4);
-  // });  
+  test('method should assign another property to the object called healthStatus and in this case return "standard"', () => {
+    const nonSmoker = true;
+    const exercise = false;
+    const healthyDiet = false;
+    lunaFromTheMilkyWay.calculateAges();
+    lunaFromTheMilkyWay.determineLifeExpectancy(nonSmoker, exercise, healthyDiet);
+    expect(lunaFromTheMilkyWay.healthStatus).toEqual("standard");
+    expect(lunaFromTheMilkyWay.earthInfo.yearsLeft).toEqual(44);
+    expect(lunaFromTheMilkyWay.mercuryInfo.yearsLeft).toEqual(183);
+    expect(lunaFromTheMilkyWay.venusInfo.yearsLeft).toEqual(71);
+    expect(lunaFromTheMilkyWay.marsInfo.yearsLeft).toEqual(23);
+    expect(lunaFromTheMilkyWay.jupiterInfo.yearsLeft).toEqual(4);
+  });  
 
   test('it should return a string that contains years above life-expectancy when users age surpasses it: "Over estimated life-expectancy by x years" and set this as the second item in the object containing planet info', () => {
     let oldLuna = new GalacticAges("Luna", "100");
