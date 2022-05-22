@@ -24,19 +24,19 @@ describe('GalacticAges', () => {
     expect(lunaFromTheMilkyWay.jupiterInfo.age).toEqual(2.95);
   });
 
-  // test('method should assign another property to the object called healthStatus and in this case return "healthy." It should also calculate years left on each planet based on "healthy" healthStatus and set these as second elements in array for each planet age', () => {
-  //   const nonSmoker = true;
-  //   const exercise = true;
-  //   const healthyDiet = true;
-  //   lunaFromTheMilkyWay.calculateAges();
-  //   lunaFromTheMilkyWay.determineLifeExpectancy(nonSmoker, exercise, healthyDiet);
-  //   expect(lunaFromTheMilkyWay.healthStatus).toEqual("healthy");
-  //   expect(lunaFromTheMilkyWay.userEarthAge[1]).toEqual(47);
-  //   expect(lunaFromTheMilkyWay.ageInMercury[1]).toEqual(196);
-  //   expect(lunaFromTheMilkyWay.ageInVenus[1]).toEqual(76);
-  //   expect(lunaFromTheMilkyWay.ageInMars[1]).toEqual(25);
-  //   expect(lunaFromTheMilkyWay.ageInJupiter[1]).toEqual(4);
-  // });
+  test('method should assign another property to the object called healthStatus and in this case return "healthy." It should also calculate years left on each planet based on "healthy" status and set this number as the value of key "yearsLeft" inside corresponding planet info object', () => {
+    const nonSmoker = true;
+    const exercise = true;
+    const healthyDiet = true;
+    lunaFromTheMilkyWay.calculateAges();
+    lunaFromTheMilkyWay.determineLifeExpectancy(nonSmoker, exercise, healthyDiet);
+    expect(lunaFromTheMilkyWay.healthStatus).toEqual("healthy");
+    expect(lunaFromTheMilkyWay.earthInfo.yearsLeft).toEqual(47);
+    expect(lunaFromTheMilkyWay.mercuryInfo.yearsLeft).toEqual(196);
+    expect(lunaFromTheMilkyWay.venusInfo.yearsLeft).toEqual(76);
+    expect(lunaFromTheMilkyWay.marsInfo.yearsLeft).toEqual(25);
+    expect(lunaFromTheMilkyWay.jupiterInfo.yearsLeft).toEqual(4);
+  });
 
   // test('method should assign another property to the object called healthStatus and in this case return "unhealthy." It should also calculate years left on each planet based on "unhealthy" healthStatus and set these as second elements in array for each planet age', () => {
   //   const nonSmoker = false;
