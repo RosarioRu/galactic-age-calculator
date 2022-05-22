@@ -29,7 +29,7 @@ describe('GalacticAges', () => {
     const exercise = true;
     const healthyDiet = true;
     lunaFromTheMilkyWay.calculateAges();
-    lunaFromTheMilkyWay.determineHealthStatus(nonSmoker, exercise, healthyDiet);
+    lunaFromTheMilkyWay.determineLifeExpectancy(nonSmoker, exercise, healthyDiet);
     expect(lunaFromTheMilkyWay.healthStatus).toEqual("healthy");
     expect(lunaFromTheMilkyWay.userEarthAge[1]).toEqual(47);
     expect(lunaFromTheMilkyWay.ageInMercury[1]).toEqual(196);
@@ -43,7 +43,7 @@ describe('GalacticAges', () => {
     const exercise = false;
     const healthyDiet = false;
     lunaFromTheMilkyWay.calculateAges();
-    lunaFromTheMilkyWay.determineHealthStatus(nonSmoker, exercise, healthyDiet);
+    lunaFromTheMilkyWay.determineLifeExpectancy(nonSmoker, exercise, healthyDiet);
     expect(lunaFromTheMilkyWay.healthStatus).toEqual("unhealthy");
     expect(lunaFromTheMilkyWay.userEarthAge[1]).toEqual(41);
     expect(lunaFromTheMilkyWay.ageInMercury[1]).toEqual(171);
@@ -57,7 +57,7 @@ describe('GalacticAges', () => {
     const exercise = false;
     const healthyDiet = false;
     lunaFromTheMilkyWay.calculateAges();
-    lunaFromTheMilkyWay.determineHealthStatus(nonSmoker, exercise, healthyDiet);
+    lunaFromTheMilkyWay.determineLifeExpectancy(nonSmoker, exercise, healthyDiet);
     expect(lunaFromTheMilkyWay.healthStatus).toEqual("standard");
     expect(lunaFromTheMilkyWay.userEarthAge[1]).toEqual(44);
     expect(lunaFromTheMilkyWay.ageInMercury[1]).toEqual(183);
@@ -72,7 +72,7 @@ describe('GalacticAges', () => {
     const exercise = true;
     const healthyDiet = true;
     oldLuna.calculateAges();
-    oldLuna.determineHealthStatus(nonSmoker, exercise, healthyDiet);
+    oldLuna.determineLifeExpectancy(nonSmoker, exercise, healthyDiet);
     expect(oldLuna.healthStatus).toEqual("healthy");
     expect(oldLuna.userEarthAge[1]).toEqual("Over estimated life-expectancy by " + 18 + " years");
     expect(oldLuna.ageInMercury[1]).toEqual("Over estimated life-expectancy by " + 75 + " years");

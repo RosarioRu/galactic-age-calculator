@@ -14,7 +14,7 @@ export default class GalacticAges {
     this.ageInJupiter = [Math.round(100*earthAge/11.86)/100];
   }
 
-  determineHealthStatus(nonSmoker, exercises, healthyDiet) {
+  determineLifeExpectancy(nonSmoker, exercises, healthyDiet) {
     const averageEarthLifeExpectancy = 78.79;
     if ((nonSmoker === true) && (exercises === true) && (healthyDiet === true)) {
       this.healthStatus = "healthy";
