@@ -7,6 +7,36 @@
   <div class="container">
     <div class="jumbotron">
       <h1>Welcome to the Milky Way Galactic Age Calculator</h1>
+      <form id="questions">
+        <div class="form-group">
+          <label for="name">Please enter your name</label>
+          <input id="name" class="form-control" type="text" required>
+        </div>
+        <div class="form-group">
+          <label for="age">How old are you?</label>
+          <input id="age" class="form-control" type="number" required>
+        </div>
+        <label for="smoker">Are you a smoker?</label>
+        <select class="form-control" id="smoker" required>
+          <option value=""></option>
+          <option value=true >No</option>
+          <option value=false >Yes</option>
+        </select>
+        <label for="age">Do you exercise?</label>
+        <select class="form-control" id="exercise" required>
+          <option value=""></option>
+          <option value = true>Yes</option>
+          <option value=false>No</option>
+        </select>
+      </select>
+      <label for="diet">Do you eat a healthy diet?</label>
+      <select class="form-control" id="diet" required>
+        <option value=""></option>
+        <option value = true>Yes</option>
+        <option value=false>No</option>
+      </select>
+        <button type="submit" class="btn btn-light">Submit to get galactic ages</button>
+      </form>
     </div>
   </div>
 </body>
