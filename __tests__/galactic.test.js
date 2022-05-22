@@ -7,7 +7,7 @@ describe('GalacticAges', () => {
     lunaFromTheMilkyWay = new GalacticAges("Luna", 35);
   });
 
-  test('should create an object with two properties - userName and age(inside earthInfo)', () => {
+  test ('should create an object with two properties - userName and age(inside earthInfo)', () => {
     expect(lunaFromTheMilkyWay.userName).toEqual("Luna");
     expect(lunaFromTheMilkyWay.earthInfo.age).toEqual(35);
   });
@@ -66,19 +66,19 @@ describe('GalacticAges', () => {
   //   expect(lunaFromTheMilkyWay.ageInJupiter[1]).toEqual(4);
   // });  
 
-  // test('it should return a string that contains years above life-expectancy when users age surpasses it: "Over estimated life-expectancy by x years" and set this as the second element in the array containing users age in each planet', () => {
-  //   let oldLuna = new GalacticAges("Luna", "100");
-  //   const nonSmoker = true;
-  //   const exercise = true;
-  //   const healthyDiet = true;
-  //   oldLuna.calculateAges();
-  //   oldLuna.determineLifeExpectancy(nonSmoker, exercise, healthyDiet);
-  //   expect(oldLuna.healthStatus).toEqual("healthy");
-  //   expect(oldLuna.earthInfo[1]).toEqual("Over estimated life-expectancy by " + 18 + " years");
-  //   expect(oldLuna.ageInMercury[1]).toEqual("Over estimated life-expectancy by " + 75 + " years");
-  //   expect(oldLuna.ageInVenus[1]).toEqual("Over estimated life-expectancy by " + 29 + " years");
-  //   expect(oldLuna.ageInMars[1]).toEqual("Over estimated life-expectancy by " + 10 + " years");
-  //   expect(oldLuna.ageInJupiter[1]).toEqual("Over estimated life-expectancy by " + 2 + " years");
-  // });
+  test('it should return a string that contains years above life-expectancy when users age surpasses it: "Over estimated life-expectancy by x years" and set this as the second item in the object containing planet info', () => {
+    let oldLuna = new GalacticAges("Luna", "100");
+    const nonSmoker = true;
+    const exercise = true;
+    const healthyDiet = true;
+    oldLuna.calculateAges();
+    oldLuna.determineLifeExpectancy(nonSmoker, exercise, healthyDiet);
+    expect(oldLuna.healthStatus).toEqual("healthy");
+    expect(oldLuna.earthInfo.yearsLeft).toEqual("Over estimated life-expectancy by " + 18 + " years");
+    expect(oldLuna.mercuryInfo.yearsLeft).toEqual("Over estimated life-expectancy by " + 75 + " years");
+    expect(oldLuna.venusInfo.yearsLeft).toEqual("Over estimated life-expectancy by " + 29 + " years");
+    expect(oldLuna.marsInfo.yearsLeft).toEqual("Over estimated life-expectancy by " + 10 + " years");
+    expect(oldLuna.jupiterInfo.yearsLeft).toEqual("Over estimated life-expectancy by " + 2 + " years");
+  });
 
 })
