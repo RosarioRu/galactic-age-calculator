@@ -91,8 +91,8 @@ describe('GalacticAges', () => {
     expect(oldLuna.healthStatus).toEqual("unhealthy");
     expect(oldLuna.earthInfo.yearsLeft).toEqual("Over estimated life-expectancy by " + 24 + " years");
     expect(oldLuna.mercuryInfo.yearsLeft).toEqual("Over estimated life-expectancy by " + 100 + " years");
-    expect(oldLuna.venusInfo.yearsLeft).toEqual("Over estimated life-expectancy by " + 38 + " years");
-    expect(oldLuna.marsInfo.yearsLeft).toEqual("Over estimated life-expectancy by " + 14 + " years");
+    expect(oldLuna.venusInfo.yearsLeft).toEqual("Over estimated life-expectancy by " + 39 + " years");
+    expect(oldLuna.marsInfo.yearsLeft).toEqual("Over estimated life-expectancy by " + 13 + " years");
     expect(oldLuna.jupiterInfo.yearsLeft).toEqual("Over estimated life-expectancy by " + 2 + " years");
   });
 
