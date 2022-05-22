@@ -1,4 +1,4 @@
-//business logic with class example below:
+//business logic
 
 export default class GalacticAges {
   constructor (userName, userAge) {
@@ -16,16 +16,6 @@ export default class GalacticAges {
 
   determineLifeExpectancy(nonSmoker, exercises, healthyDiet) {
     const averageEarthLifeExpectancy = 78.79;
-
-    function overLifeExpectancy() {
-      this.earthInfo.yearsLeft= "Over estimated life-expectancy by " + earthYrsPastLifeExpectancy + " years";
-      this.mercuryInfo.yearsLeft= "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/0.24) + " years";
-      this.venusInfo.yearsLeft= "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/0.62) + " years";
-        ;
-      this.marsInfo.yearsLeft = "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/1.88) + " years";
-      this.jupiterInfo.yearsLeft= "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/11.86) + " years";
-    };
-
     if ((nonSmoker === true) && (exercises === true) && (healthyDiet === true)) {
       this.healthStatus = "healthy";
       this.earthInfo.yearsLeft= Math.round(averageEarthLifeExpectancy+3 - this.earthInfo.age);
@@ -36,17 +26,12 @@ export default class GalacticAges {
         this.jupiterInfo.yearsLeft = Math.round(this.earthInfo.yearsLeft/11.86);
       } else {
         const earthYrsPastLifeExpectancy = Math.abs(this.earthInfo.yearsLeft);
-        overLifeExpectancy();
+        this.earthInfo.yearsLeft= "Over estimated life-expectancy by " + earthYrsPastLifeExpectancy + " years";
+        this.mercuryInfo.yearsLeft= "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/0.24) + " years";
+        this.venusInfo.yearsLeft= "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/0.62) + " years";
+        this.marsInfo.yearsLeft = "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/1.88) + " years";
+        this.jupiterInfo.yearsLeft= "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/11.86) + " years";
       }
-      // } else {
-      //   const earthYrsPastLifeExpectancy = Math.abs(this.earthInfo.yearsLeft);
-      //   this.earthInfo.yearsLeft= "Over estimated life-expectancy by " + earthYrsPastLifeExpectancy + " years";
-      //   this.mercuryInfo.yearsLeft= "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/0.24) + " years";
-      //   this.venusInfo.yearsLeft= "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/0.62) + " years";
-      //     ;
-      //   this.marsInfo.yearsLeft = "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/1.88) + " years";
-      //   this.jupiterInfo.yearsLeft= "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/11.86) + " years";
-      // }
     } else if (nonSmoker===false && exercises===false && healthyDiet ===false) {
       this.healthStatus = "unhealthy";
       this.earthInfo.yearsLeft = Math.round(averageEarthLifeExpectancy-3 - this.earthInfo.age);
@@ -57,16 +42,12 @@ export default class GalacticAges {
         this.jupiterInfo.yearsLeft = Math.round(this.earthInfo.yearsLeft/11.86);
       } else {
         const earthYrsPastLifeExpectancy = Math.abs(this.earthInfo.yearsLeft);
-        overLifeExpectancy();
+        this.earthInfo.yearsLeft= "Over estimated life-expectancy by " + earthYrsPastLifeExpectancy + " years";
+        this.mercuryInfo.yearsLeft= "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/0.24) + " years";
+        this.venusInfo.yearsLeft= "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/0.62) + " years";
+        this.marsInfo.yearsLeft = "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/1.88) + " years";
+        this.jupiterInfo.yearsLeft= "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/11.86) + " years";
       }
-      //   const earthYrsPastLifeExpectancy = Math.abs(this.earthInfo.yearsLeft);
-      //   this.earthInfo.yearsLeft= "Over estimated life-expectancy by " + earthYrsPastLifeExpectancy + " years";
-      //   this.mercuryInfo.yearsLeft= "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/0.24) + " years";
-      //   this.venusInfo.yearsLeft= "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/0.62) + " years";
-      //     ;
-      //   this.marsInfo.yearsLeft = "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/1.88) + " years";
-      //   this.jupiterInfo.yearsLeft= "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/11.86) + " years";
-      // }
     } else {
       this.healthStatus = "standard";
       this.earthInfo.yearsLeft= Math.round(averageEarthLifeExpectancy - this.earthInfo.age);
@@ -75,19 +56,15 @@ export default class GalacticAges {
         this.venusInfo.yearsLeft = Math.round(this.earthInfo.yearsLeft/0.62);
         this.marsInfo.yearsLeft = Math.round(this.earthInfo.yearsLeft/1.88);
         this.jupiterInfo.yearsLeft = Math.round(this.earthInfo.yearsLeft/11.86);
-      } else {
+      } else { 
         const earthYrsPastLifeExpectancy = Math.abs(this.earthInfo.yearsLeft);
-
-        overLifeExpectancy();
+        this.earthInfo.yearsLeft= "Over estimated life-expectancy by " + earthYrsPastLifeExpectancy + " years";
+        this.mercuryInfo.yearsLeft= "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/0.24) + " years";
+        this.venusInfo.yearsLeft= "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/0.62) + " years";
+          ;
+        this.marsInfo.yearsLeft = "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/1.88) + " years";
+        this.jupiterInfo.yearsLeft= "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/11.86) + " years"
       }
-      //   const earthYrsPastLifeExpectancy = Math.abs(this.earthInfo.yearsLeft);
-      //   this.earthInfo.yearsLeft= "Over estimated life-expectancy by " + earthYrsPastLifeExpectancy + " years";
-      //   this.mercuryInfo.yearsLeft= "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/0.24) + " years";
-      //   this.venusInfo.yearsLeft= "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/0.62) + " years";
-      //     ;
-      //   this.marsInfo.yearsLeft = "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/1.88) + " years";
-      //   this.jupiterInfo.yearsLeft= "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/11.86) + " years";
-      // }
     }
   }
 }
