@@ -13,4 +13,26 @@ $(document).ready(function() {
   // exerciess (boolean)
   // healthyDiet (boolean)
 
+  $("form#questions").submit(function(event){
+    event.preventDefault();
+    const name =$("input#name").val();
+    const age = $("input#age").val();
+    const nonSmoker =$("#smoker").val();
+    const exercise = $("#exercise").val();
+    const healthyDiet = $("#diet").val();
+
+    let userGalaxyInfo = new GalacticAges(name, age);
+    userGalaxyInfo.calculateAges;
+    userGalaxyInfo.determineLifeExpectancy;
+    let result = name + age + nonSmoker + exercise + healthyDiet;
+
+    // let result = ("Hello " + name + "." + " Your estimated remaining time on Earth is: " + userGalaxyInfo[earthInfo.yearsLeft] + ".");
+
+
+    $(".before-submit").hide();
+    $(".show-results").show();
+    $("#result").html(result);
+
+  });
+ 
 });
