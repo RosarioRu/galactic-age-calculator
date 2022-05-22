@@ -40,14 +40,14 @@ export default class GalacticAges {
       this.venusInfo.yearsLeft = Math.round(this.earthInfo.yearsLeft/0.62);
       this.marsInfo.yearsLeft = Math.round(this.earthInfo.yearsLeft/1.88);
       this.jupiterInfo.yearsLeft = Math.round(this.earthInfo.yearsLeft/11.86);
-  //   } else {
-  //     this.healthStatus = "standard";
-  //     this.earthInfo[1] = Math.round(averageEarthLifeExpectancy - this.earthInfo[0]);
-  //     this.ageInMercury[1] = Math.round(this.earthInfo[1]/0.24);
-  //     this.ageInVenus[1] = Math.round(this.earthInfo[1]/0.62);
-  //     this.ageInMars[1] = Math.round(this.earthInfo[1]/1.88);
-  //     this.ageInJupiter[1] = Math.round(this.earthInfo[1]/11.86);
-  //   }
+    } else {
+      this.healthStatus = "standard";
+      this.earthInfo.yearsLeft= Math.round(averageEarthLifeExpectancy - this.earthInfo.age);
+      this.mercuryInfo.yearsLeft = Math.round(this.earthInfo.yearsLeft/0.24);
+      this.venusInfo.yearsLeft = Math.round(this.earthInfo.yearsLeft/0.62);
+      this.marsInfo.yearsLeft = Math.round(this.earthInfo.yearsLeft/1.88);
+      this.jupiterInfo.yearsLeft = Math.round(this.earthInfo.yearsLeft/11.86);
+    
   // }
 
     }} //temporary curly braces
