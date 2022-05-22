@@ -103,7 +103,7 @@ describe('GalacticAges', () => {
     const healthyDiet = false;
     oldLuna.calculateAges();
     oldLuna.determineLifeExpectancy(nonSmoker, exercise, healthyDiet);
-    expect(oldLuna.healthStatus).toEqual("unhealthy");
+    expect(oldLuna.healthStatus).toEqual("standard");
     expect(oldLuna.earthInfo.yearsLeft).toEqual("Over estimated life-expectancy by " + 21 + " years");
     expect(oldLuna.mercuryInfo.yearsLeft).toEqual("Over estimated life-expectancy by " + 88 + " years");
     expect(oldLuna.venusInfo.yearsLeft).toEqual("Over estimated life-expectancy by " + 34 + " years");
