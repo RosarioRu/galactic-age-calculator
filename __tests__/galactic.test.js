@@ -81,4 +81,19 @@ describe('GalacticAges', () => {
     expect(oldLuna.jupiterInfo.yearsLeft).toEqual("Over estimated life-expectancy by " + 2 + " years");
   });
 
+  test('For "unhealthy" branch: it should return a string that contains years above life-expectancy when users age surpasses it: "Over estimated life-expectancy by x years" and set this as the second item in the object containing planet info', () => {
+    let oldLuna = new GalacticAges("Luna", "100");
+    const nonSmoker = false;
+    const exercise = false;
+    const healthyDiet = false;
+    oldLuna.calculateAges();
+    oldLuna.determineLifeExpectancy(nonSmoker, exercise, healthyDiet);
+    expect(oldLuna.healthStatus).toEqual("unhealthy");
+    expect(oldLuna.earthInfo.yearsLeft).toEqual("Over estimated life-expectancy by " + 24 + " years");
+    expect(oldLuna.mercuryInfo.yearsLeft).toEqual("Over estimated life-expectancy by " + 100 + " years");
+    expect(oldLuna.venusInfo.yearsLeft).toEqual("Over estimated life-expectancy by " + 38 + " years");
+    expect(oldLuna.marsInfo.yearsLeft).toEqual("Over estimated life-expectancy by " + 14 + " years");
+    expect(oldLuna.jupiterInfo.yearsLeft).toEqual("Over estimated life-expectancy by " + 2 + " years");
+  });
+
 })
