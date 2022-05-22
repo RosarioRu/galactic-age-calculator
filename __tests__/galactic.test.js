@@ -66,21 +66,6 @@ describe('GalacticAges', () => {
     expect(lunaFromTheMilkyWay.ageInJupiter[1]).toEqual(4);
   });  
 
-  test('it should return a negative number when user has surpassed life-expectancy', () => {
-    let oldLuna = new GalacticAges("Luna", "100");
-    const nonSmoker = true;
-    const exercise = true;
-    const healthyDiet = true;
-    oldLuna.calculateAges();
-    oldLuna.determineHealthStatus(nonSmoker, exercise, healthyDiet);
-    expect(oldLuna.healthStatus).toEqual("healthy");
-    expect(oldLuna.userEarthAge[1]).toEqual(-18);
-    expect(oldLuna.ageInMercury[1]).toEqual(-75);
-    expect(oldLuna.ageInVenus[1]).toEqual(-29);
-    expect(oldLuna.ageInMars[1]).toEqual(-10);
-    expect(oldLuna.ageInJupiter[1]).toEqual(-2);
-  });
-
   test('it should return a string that contains years above life-expectancy when users age surpasses it: "Over estimated life-expectancy by x years" and set this as the second element in the array containing users age in each planet', () => {
     let oldLuna = new GalacticAges("Luna", "100");
     const nonSmoker = true;
@@ -89,11 +74,11 @@ describe('GalacticAges', () => {
     oldLuna.calculateAges();
     oldLuna.determineHealthStatus(nonSmoker, exercise, healthyDiet);
     expect(oldLuna.healthStatus).toEqual("healthy");
-    expect(oldLuna.userEarthAge[1]).toEqual("Over estimated life-expectancy by" + 18 + " years");
-    expect(oldLuna.ageInMercury[1]).toEqual("Over estimated life-expectancy by" + 75 + " years");
-    expect(oldLuna.ageInVenus[1]).toEqual("Over estimated life-expectancy by" + 29 + " years");
-    expect(oldLuna.ageInMars[1]).toEqual("Over estimated life-expectancy by" + 10 + " years");
-    expect(oldLuna.ageInJupiter[1]).toEqual("Over estimated life-expectancy by" + 2 + " years");
+    expect(oldLuna.userEarthAge[1]).toEqual("Over estimated life-expectancy by " + 18 + " years");
+    expect(oldLuna.ageInMercury[1]).toEqual("Over estimated life-expectancy by " + 75 + " years");
+    expect(oldLuna.ageInVenus[1]).toEqual("Over estimated life-expectancy by " + 29 + " years");
+    expect(oldLuna.ageInMars[1]).toEqual("Over estimated life-expectancy by " + 10 + " years");
+    expect(oldLuna.ageInJupiter[1]).toEqual("Over estimated life-expectancy by " + 2 + " years");
   });
 
 })
