@@ -21,16 +21,14 @@ _The project was created for Epicodus after the Test Driven Development section 
 
 * _Clone repository from Github and save a copy on own computer_
 
-* _update the steps!_
-
-* _(See Github page for this project](https://rosarioru.github.io/UPDATE/)_
+* _Using terminal, enter the following commands in order: npm install, npm run build_
 
 ## Known Bugs
 
-* _update_
+* _Bootstrap is not working_
 
 ## License
 
 MIT License
 
-Copyright (c) _MONTH_YEAR_ _Rosario Ruvalcaba Harwood_
+Copyright (c) _May_2022 _Rosario Ruvalcaba Harwood_
