@@ -29,7 +29,7 @@ _The project was created for Epicodus after the Test Driven Development section 
 
 * _You may also enter the command $ npm run start, which will open a webpack dev server and create and build the dist directory at the same time. To exit this command in the terminal press Ctrl+C._
 
-* _To run the tests inside __tests__ directory, enter the command $ npm test._
+* _To run the tests inside "__tests__" directory, enter the command $ npm test._
 
 
 ## Known Bugs
