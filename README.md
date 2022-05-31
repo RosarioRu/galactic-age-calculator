@@ -12,6 +12,8 @@
 * _Bootstrap_
 * _JavaScript_
 * _jQuery_
+*_Webpack_
+*_Jest_
 
 ## Description
 
