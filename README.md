@@ -14,7 +14,7 @@
 * _jQuery_
 *_Webpack_
 *_Jest_
-
+*_Please see package.json file for a more thorough list of project dependencies._
 ## Description
 
 _The project was created for Epicodus after the Test Driven Development section in order to demonstrate understanding of Red-Green-Refactor workflow. Project utilizes ES6 classes and arrow notation._
