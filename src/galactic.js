@@ -61,9 +61,8 @@ export default class GalacticAges {
         this.earthInfo.yearsLeft= "Over estimated life-expectancy by " + earthYrsPastLifeExpectancy + " years";
         this.mercuryInfo.yearsLeft= "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/0.24) + " years";
         this.venusInfo.yearsLeft= "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/0.62) + " years";
-          ;
         this.marsInfo.yearsLeft = "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/1.88) + " years";
-        this.jupiterInfo.yearsLeft= "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/11.86) + " years"
+        this.jupiterInfo.yearsLeft= "Over estimated life-expectancy by " + Math.round(earthYrsPastLifeExpectancy/11.86) + " years";
       }
     }
   }

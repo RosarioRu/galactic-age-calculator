@@ -5,6 +5,7 @@ import './css/styles.css';
 import GalacticAges from './galactic.js';
 
 $(document).ready(function() {
+
   //UI logic goes here!
   //obtain user data for the following variables: 
   // name (string)
@@ -13,7 +14,7 @@ $(document).ready(function() {
   // exerciess (boolean)
   // healthyDiet (boolean)
 
-  $("form#questions").submit(function(event){
+  $("form#questions").submit(function(event) {
     event.preventDefault();
     const name =$("input#name").val();
     const age = $("input#age").val();
@@ -22,9 +23,12 @@ $(document).ready(function() {
     const healthyDiet = $("#diet").val();
 
     let userGalaxyInfo = new GalacticAges(name, age);
-    userGalaxyInfo.calculateAges;
-    userGalaxyInfo.determineLifeExpectancy;
-    let result = name + age + nonSmoker + exercise + healthyDiet;
+    userGalaxyInfo.calculateAges();
+    userGalaxyInfo.determineLifeExpectancy(nonSmoker, exercise, healthyDiet);
+    let result = userGalaxyInfo.earthInfo.age;
+
+    // const { userName, healthStatus, (const { age, yearsLeft} = earthInfo) } = userGalaxyInfo;
+
 
     // let result = ("Hello " + name + "." + " Your estimated remaining time on Earth is: " + userGalaxyInfo[earthInfo.yearsLeft] + ".");
 
@@ -32,6 +36,7 @@ $(document).ready(function() {
     $(".before-submit").hide();
     $(".show-results").show();
     $("#result").html(result);
+
 
   });
  
